@@ -9,3 +9,6 @@ git add <file_name>
 
 # commit
 git commit -m "<msg>"
+
+# push into github repo
+git push origin main
