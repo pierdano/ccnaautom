@@ -16,3 +16,7 @@ ssh-add ansible
 vim ~/.bashrc
 #append:
 alias ssha='eval $(ssh-agent) && ssh-add ~/.ssh/github'
+
+
+# clone repo from:github to:local
+git clone git@github.com:pierdano/ccnaautom.git
