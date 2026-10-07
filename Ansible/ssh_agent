@@ -1,0 +1,15 @@
+# create the key on the starting host, from where you want to use ansible
+ssh-keygen
+
+# copy the key to the destination server
+ssh-copy-id -i ansible baba@192.168.122.71
+
+# --- To be repeated if you don't make it persistent  ---
+# active agent, so I don't have to type it
+eval $(ssh-agent)
+
+#added the key that the agent must use
+ssh-add ansible
+
+
+#todo: change systemd to make it persistent
