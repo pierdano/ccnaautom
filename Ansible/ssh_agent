@@ -15,4 +15,4 @@ ssh-add ansible
 #todo: change systemd to make it persistent
 vim ~/.bashrc
 #append:
-alias ssha='eval $(ssh-agent)' ^^ ssh-add ~/.ssh/github
+alias ssha='eval $(ssh-agent)' && ssh-add ~/.ssh/github
