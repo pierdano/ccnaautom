@@ -1,0 +1,26 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repo index
+    ansible.builtin.dnf:
+      update_cache: yes
+    when: ansible_distribution == "Rocky"
+
+
+  - name: install <a pkg>
+    ansible.builtin.dnf:
+      name: vim
+    when: ansible_distribution == "Rocky"
+
+  - name: update repo index
+    ansible.builtin.apt:
+      update_cache: yes
+    when: ansible_distribution == "Debian"
+
+
+  - name: install <a pkg>
+    ansible.builtin.apt:
+      name: vim
+    when: ansible_distribution == "Debian"

@@ -1,0 +1,11 @@
+#with module apt, you must have sudo privileges, but become is more than sudo!
+# dnf o apt update
+ansible all -m dnf -a update_cache=true  --become --ask-become-pass
+
+# dnf o apt install
+ansible all -m dnf -a name=vim-nox --become --ask-become-pass
+
+# upgrade distro
+ansible all -m apt -a upgrade=dist --become --ask-become-pass
+
+

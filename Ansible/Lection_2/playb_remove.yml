@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repo index
+    ansible.builtin.dnf:
+      update_cache: yes
+
+  - name:  remove  <a pkg>
+    ansible.builtin.dnf:
+      name: vim
+      state: absent
