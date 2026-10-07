@@ -1,0 +1,6 @@
+Host 192.168.122.71
+  User baba
+  IdentityFile /home/dano/Documents/Ansible/ccnaautom/Ansible/Lection_1/inventory
+  IdentitiesOnly yes
+  
+
