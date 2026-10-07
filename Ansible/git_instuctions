@@ -12,3 +12,5 @@ git commit -m "<msg>"
 
 # push into github repo
 git push origin main
+# show the user who made changes
+git config --global --edit

@@ -1,0 +1,6 @@
+[my_hosts]
+192.168.122.71
+# or hostname
+
+[my_hosts:vars]
+ansible_user=baba

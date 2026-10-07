@@ -1,0 +1,32 @@
+#
+
+
+
+# here you pass the key file
+ansible all --key-file ~/.ssh/ansible -i inventory -m ping
+
+
+# try ping, with agent, without passwd
+$ ansible all -i /home/dano/Documents/Ansible/ccnaautom/Ansible/inventory  -m ping
+192.168.122.71 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/libexec/platform-python"
+    },
+    "changed": false,
+    "ping": "pong"
+#to run he need inventory and config
+# inventory
+ [my_hosts]
+ 192.168.122.71
+ # or hostname
+ 
+ [my_hosts:vars]
+ ansible_user=baba
+# config
+  Host 192.168.122.71
+    User baba
+    IdentityFile /home/dano/Documents/Ansible/inventory
+    IdentitiesOnly yes
+
+    
+
